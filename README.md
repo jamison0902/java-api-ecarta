@@ -18,8 +18,8 @@ Este projeto tem o objetivo de trabalhar com conceitos de design e arquitetura d
 
 ## Recursos
 
--Linguagem de programação Java LTS (JDK 17); 
--Builder através do Maven; 
+- Linguagem de programação Java LTS (JDK 17); 
+- Builder através do Maven; 
 - Banco de Dados Open Source PostgreSQL; 
 - Versionado através do Git / Github; 
 - Diagramação UML
