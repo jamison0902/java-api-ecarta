@@ -1,5 +1,6 @@
 ![image](estacio.png)
 
+**EQUIPE DEV TEAM 01**
 **Nome:** Jamison Queiroz - 202208101127@alunos.estacio.br\
 **Nome:** Dayana Alves - 202205116484@alunos.estacio.br\
 **Nome:** Herval Dantas - 202205119203@alunos.estacio.br\
