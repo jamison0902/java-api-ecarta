@@ -14,7 +14,6 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 /**
  *
  * @author leosc
@@ -41,12 +40,15 @@ public class WelcomeController {
         List<Processo> processos = apiService.getDataFromApi();
         System.out.println("Dados da API: ");
         for (Processo processo : processos) {
-        Integer id = processo.getId();
-        // Verifique se já existe um processo com o ID da API no banco de dados
-        if (!processoRepository.existsByIdApi(id)) {
-            // Se não existe, salve o processo no banco de dados
+        String doc = processo.getDocumento();
+        String num = processo.getNumeroProcesso();
+        // Verifique se já existe um processo com os mesmos dados no banco
+        if (!processoRepository.existsByDocumento(doc)&& !processoRepository.existsByNumeroProcesso(num)) {
+            
             processoRepository.save(processo);
-        }       
+        }else{
+            System.out.println("ja existe!!");
+        }    
     }
         
         return processos; 
@@ -79,8 +81,7 @@ public class WelcomeController {
         processoRepository.save(processo);
         }
         
-        return processosSemCepComEmail;
-        
+        return processosSemCepComEmail; 
     }  
     @GetMapping("/dados-sem-dados")
     public List<Processo> receberDadosSemDados() {

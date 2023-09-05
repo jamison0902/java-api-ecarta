@@ -12,24 +12,18 @@ import lombok.Data;
  */
 @Data
 @Entity
-@Table(name = "dados_processos5")
+@Table(name = "dados_testeNovo")
 public class Processo {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_db")
-    private Integer idParte;
-    
     @Column(name = "id")
     private Integer id;    
-    
-    @Column(name = "numeroProcesso")
-    private String numeroProcesso;
-
+   
     @Column(name = "nome")
     private String nome;
     
-    @Column(name = "documento")
+    @Column(unique = true, nullable = false)
     private String documento;
 
     @Column(name = "email")
@@ -37,8 +31,26 @@ public class Processo {
 
     @Column(name = "cep")
     private String cep;
+    
+    @Column(unique = true, nullable = false)
+    private String numeroProcesso;
 
     @Column(name ="notificado")
     private boolean notificado;
+    
+    @Column(name ="logradouro")
+    private String logradouro;
+
+    @Column(name ="complemento")
+    private String complemento;
+
+    @Column(name ="bairro")
+    private String bairro;
+
+    @Column(name ="localidade")
+    private String localidade;
+
+    @Column(name ="uf")
+    private String uf;
 
 }

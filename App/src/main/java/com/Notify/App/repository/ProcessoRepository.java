@@ -7,7 +7,6 @@ package com.Notify.App.repository;
 import com.Notify.App.model.Processo;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -16,8 +15,7 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface ProcessoRepository extends JpaRepository<Processo, Integer> { 
-    @Query("SELECT COUNT(p) > 0 FROM Processo p WHERE p.id = :id")
-    boolean existsByIdApi(Integer id);
-    
+     boolean existsByDocumento(String documento); 
+     boolean existsByNumeroProcesso(String numeroProcesso);
  
 }
