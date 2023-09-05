@@ -1,0 +1,9 @@
+com\Notify\App\service\ApiService.class
+com\Notify\App\model\EmailRequest.class
+com\Notify\App\repository\ProcessoRepository.class
+com\Notify\App\service\EmailService.class
+com\Notify\App\AppApplication.class
+com\Notify\App\controller\EmailController.class
+com\Notify\App\service\RestTemplateConfig.class
+com\Notify\App\model\Processo.class
+com\Notify\App\controller\WelcomeController.class
