@@ -1,6 +1,50 @@
 ## API para Notificar Usando o E-Carta
 
-Dividimos a aplicação, da missão de certificação do mundo 3, em aplicações menores e essa API faz a notificação através do E-Carta disponibilizando os processos que serão notificados atra
+Dividimos a aplicação, da missão de certificação do mundo 3, em aplicações menores e essa aplicação executa os seguintes procedimentos:
+
+- Disponibiliza os processos que serão notificados através do E-Carta pelo método GET de uma API REST.
+- Serão disponibilizados no mínimo 10 processos para o envio. 
+- Usaremos o método PUT para atualizar as cartas que foram notificadas. 
+- Será consultada a API ViaCEP para atualizar as informações de endereço das partes no banco através do CEP.
+
+<hr>
+
+Para iniciar este projeto, foi utilizado o [spring initializr](https://start.spring.io/) utilizando as seguintes opções:
+
+![image](spring.png)
+
+<hr>
+
+Para iniciar este projeto, foi utilizado o [spring initializr](https://start.spring.io/) utilizando as opções:
+* Project: Maven Project;
+* Language: Java 11;
+* Spring Boot: 2.6.0;
+* Dependencies: Spring Web, Spring Data JPA, H2 Database e OpenFeign.
+
+Dependência adicionada manualmente no `pom.xml`: [Springdoc OpenAPI UI v1.5.12](https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-ui/1.5.12).
+
+<hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+essa API faz a notificação através do E-Carta disponibilizando os processos que serão notificados atra
 
 Esta API faz parte do projeto da missão 3 e visa efetuar a disponibilização dos processos que irão ser enotificados usando
 
@@ -16,7 +60,7 @@ projeto tem o objetivo de trabalhar com conceitos de design e arquitetura de sof
 
 
 
-![image](estacio.png)
+
 
 **EQUIPE DEV TEAM 01**\
 **Nome:** Jamison Queiroz - 202208101127@alunos.estacio.br\
