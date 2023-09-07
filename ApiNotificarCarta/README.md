@@ -4,7 +4,7 @@ Dividimos a aplicação, da missão de certificação do mundo 3, em aplicaçõe
 
 - Disponibiliza os processos que serão notificados através do E-Carta pelo método GET de uma API REST;
 - Serão disponibilizados no mínimo 10 processos para o envio; 
-- Usaremos o método PUT para atualizar as cartas que foram notificadas; 
+- Usaremos o método PUT para atualizar as processos que foram notificadas; 
 - Será consultada a API ViaCEP para atualizar as informações de endereço das partes no banco através do CEP;
 
 <hr>
