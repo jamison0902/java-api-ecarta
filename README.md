@@ -7,6 +7,7 @@
 **Nome:** Jonathan Araújo - 202205178111@alunos.estacio.br\
 **Nome:** Leonardo Mota - 202205090981@alunos.estacio.br\
 **Nome:** Rickson Viana - 202205071601@alunos.estacio.br\
+**Nome:** Cleyton Muto (Colaborador)\
 **Curso:** Desenvolvimento Full Stack\
 **Turma:** 2022.4\
 **Professor:** André Luiz Avelino Sobral\
