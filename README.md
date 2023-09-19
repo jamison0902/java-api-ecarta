@@ -32,4 +32,7 @@ Este projeto tem o objetivo de trabalhar com conceitos de design e arquitetura d
 * Diretório **App** aplicação que disponibiliza as informações do PJE através de uma API SOAP.
 * Diretório **ProcessNotifyApp** aplicação que notifica por e-mail e disponibiliza as informações através de uma API REST.
 * Diretório **ApiNotificarCarta** aplicação que notifica por carta através de uma API REST.
+* * Diretório **ProcessosNotificadosPje** aplicação que disponibiliza os processos notificados para o PJE através de uma API REST.
 * Diretório **Documentos** contém a documentação do projeto.
+
+
