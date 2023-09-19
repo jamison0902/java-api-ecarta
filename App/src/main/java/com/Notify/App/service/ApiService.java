@@ -19,7 +19,7 @@ import org.springframework.web.client.RestTemplate;
  */
 @Service
 public class ApiService {
-    private final String API_URL = "http://localhost:8080/api/processos/all"; // Substitua pela URL real da API
+    private final String API_URL = "http://localhost:8089/api/processos/all"; // Substitua pela URL real da API
     private final RestTemplate restTemplate;
 
     @Autowired

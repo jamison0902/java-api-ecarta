@@ -85,16 +85,28 @@ public class WelcomeController {
     }  
     @GetMapping("/dados-sem-dados")
     public List<Processo> receberDadosSemDados() {
-        List<Processo> processos = apiService.getDataFromApi();
+        List<Processo> processos = processoRepository.findAll();
         List<Processo> processosSemCepSemEmail = processos.stream()
                 .filter(processo -> (processo.getCep() == null || processo.getCep().isEmpty()) &&
                                 (processo.getEmail() == null || processo.getEmail().isEmpty()))
                 .collect(Collectors.toList());
+        for (Processo processo : processosSemCepSemEmail) {
+        processo.setNotificado(true);
+        processoRepository.save(processo);
+        
+        // Imprimir as informações (você pode usar System.out.println ou log, dependendo do seu ambiente)
+        String nome = processo.getNome();
+        String documento = processo.getDocumento();
+        String numeroProcesso = processo.getNumeroProcesso();
+        System.out.println("Processo notificado - Nome: " + nome + ", Documento: " + documento + ", Número do Processo: " + numeroProcesso);
+        }
+        
+        
         return processosSemCepSemEmail;
     }
     @GetMapping("/dados-com-cep")
     public List<Processo> receberDadosComCep() {
-        List<Processo> processos = apiService.getDataFromApi();
+        List<Processo> processos = processoRepository.findAll();
         List<Processo> processosComCep = processos.stream()
                 .filter(processo -> processo.getCep() != null && !processo.getCep().isEmpty())
                 .collect(Collectors.toList());
