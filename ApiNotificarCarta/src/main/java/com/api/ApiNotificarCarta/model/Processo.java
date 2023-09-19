@@ -13,6 +13,7 @@ import jakarta.persistence.Id;
 
 @Data
 @Entity
+@Serializable
 public class Processo {
 
     @Id
