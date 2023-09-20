@@ -13,6 +13,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RestController;
 /**
  *
@@ -91,18 +92,30 @@ public class WelcomeController {
                                 (processo.getEmail() == null || processo.getEmail().isEmpty()))
                 .collect(Collectors.toList());
         for (Processo processo : processosSemCepSemEmail) {
-        processo.setNotificado(true);
-        processoRepository.save(processo);
-        
-        // Imprimir as informações (você pode usar System.out.println ou log, dependendo do seu ambiente)
         String nome = processo.getNome();
         String documento = processo.getDocumento();
         String numeroProcesso = processo.getNumeroProcesso();
         System.out.println("Processo notificado - Nome: " + nome + ", Documento: " + documento + ", Número do Processo: " + numeroProcesso);
         }
-        
-        
+  
         return processosSemCepSemEmail;
+    }
+    @PutMapping("/dados-sem-dados")
+    public List<Processo> notificarDadosSemDados(){
+        List<Processo> processos = processoRepository.findAll();
+        List<Processo> processosSemCepSemEmail = processos.stream()
+                .filter(processo -> (processo.getCep() == null || processo.getCep().isEmpty()) &&
+                                (processo.getEmail() == null || processo.getEmail().isEmpty()))
+                .collect(Collectors.toList());
+       for (Processo processo : processosSemCepSemEmail) {
+        processo.setNotificado(true);
+        processoRepository.save(processo);
+        String nome = processo.getNome();
+        String documento = processo.getDocumento();
+        String numeroProcesso = processo.getNumeroProcesso();
+        System.out.println("Processo notificado - Nome: " + nome + ", Documento: " + documento + ", Número do Processo: " + numeroProcesso);
+       }
+       return processosSemCepSemEmail;
     }
     @GetMapping("/dados-com-cep")
     public List<Processo> receberDadosComCep() {
