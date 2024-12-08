@@ -1,6 +1,6 @@
 ## API para Notificar Usando o E-Carta
 
-Nest projeto iremos simular os seguintes procedimentos:
+Neste projeto iremos simular os seguintes procedimentos:
 
 - Disponibiliza os processos que serão notificados através do E-Carta pelo método GET de uma API REST;
 - Serão disponibilizados no mínimo 10 processos para o envio; 
