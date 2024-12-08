@@ -1,5 +1,0 @@
-com\ProcessNotifyApp\controller\WelcomeController.class
-com\ProcessNotifyApp\controller\ProcessosController.class
-com\ProcessNotifyApp\model\Processos.class
-com\ProcessNotifyApp\repository\ProcessosJpaRepository.class
-com\ProcessNotifyApp\ProcessNotifyAppApplication.class
